@@ -1,9 +1,11 @@
-import { Provider } from "react-redux"
-import Counter from "./Counter/Counter"
-import Counter2 from "./Counter/Counter2"
-import store from "./TodoApp/store"
-import Counter3 from "./Counter/Counter3"
-import TodoApp from "./TodoApp/TodoApp"
+import { Provider } from "react-redux";
+import Counter from "./Counter/Counter";
+import Counter2 from "./Counter/Counter2";
+// import store from "./TodoApp/store";
+import { store } from "./Darkmode/store";
+import Counter3 from "./Counter/Counter3";
+import TodoApp from "./TodoApp/TodoApp";
+import DarkModeToggle from "./Darkmode/Darkmode";
 
 export default function App() {
   return (
@@ -24,7 +26,9 @@ export default function App() {
     //   </div>
     // </main>
     // </Provider>
-    <Provider store={store}>    <TodoApp/></Provider>
-
-  )
+    <Provider store={store}>
+      {/* <TodoApp/> */}
+      <DarkModeToggle />
+    </Provider>
+  );
 }
