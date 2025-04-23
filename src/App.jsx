@@ -2,10 +2,12 @@ import { Provider } from "react-redux";
 import Counter from "./Counter/Counter";
 import Counter2 from "./Counter/Counter2";
 // import store from "./TodoApp/store";
-import { store } from "./Darkmode/store";
+// import { store } from "./Darkmode/store";
+import { store } from "./CartRedux/store";
 import Counter3 from "./Counter/Counter3";
 import TodoApp from "./TodoApp/TodoApp";
 import DarkModeToggle from "./Darkmode/Darkmode";
+import CartApp from "./CartRedux/CartApp";
 
 export default function App() {
   return (
@@ -28,7 +30,8 @@ export default function App() {
     // </Provider>
     <Provider store={store}>
       {/* <TodoApp/> */}
-      <DarkModeToggle />
+      {/* <DarkModeToggle /> */}
+      <CartApp />
     </Provider>
   );
 }
